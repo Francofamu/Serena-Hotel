@@ -5,11 +5,6 @@ import thunk from "redux-thunk";
 // Verifica si la extensión Redux DevTools está instalada y habilitada
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(
-  reducer,
-  composeEnhancers(
-    applyMiddleware(thunk)
-  )
-);
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 export default store;
